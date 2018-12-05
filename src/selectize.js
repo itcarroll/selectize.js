@@ -1912,7 +1912,9 @@ $.extend(Selectize.prototype, {
 
 		self.showInput();
 		self.positionDropdown();
-		self.refreshOptions(true);
+		if (self.isOpen) {
+			self.refreshOptions(true);
+		}
 
 		// select previous option
 		if (option_select) {
